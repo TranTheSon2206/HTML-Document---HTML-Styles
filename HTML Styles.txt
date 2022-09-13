@@ -1,0 +1,246 @@
+
+	Style pointer when moving
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">Mouse over this text before and after you have clicked the button below!</p>
+
+<button type="button" onclick="myFunction()">Change cursor</button>
+ 
+<script>
+function myFunction() {
+  document.getElementById("demo").style.cursor = "pointer";
+}
+</script>
+
+</body>
+</html>
+---------------------------------------------------------------------------
+
+	diplay
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#myDIV {
+  width: 500px;
+  height: 500px;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+
+<p>Click the "Try it" button to set the display property of the DIV element to "none":</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+This is my DIV element.
+</div>
+
+<p><b>Note:</b> The element will not take up any space when the display property set to "none".</p>
+
+<script>
+function myFunction() {
+  document.getElementById("myDIV").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+------------------------------------------------------------------
+	set the value of the alignItems
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div#main {
+  width: 220px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+}
+
+div#main div {
+  flex: 1;
+}
+</style>
+</head>
+<body>
+
+<div id="main">
+  <div style="background-color:coral;">RED</div>
+  <div style="background-color:lightblue;">BLUE</div>  
+  <div style="background-color:lightgreen;">Green div with more content.</div>
+</div>
+
+<p>Click the button to set the value of the alignItems property to "flex-start"</p>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("main").style.alignItems = "flex-start";
+}
+</script>
+
+<p><b>Note:</b> Internet Explorer 10 and earlier versions do not support the alignItems property.</p>
+
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------
+
+	change the fonts
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo">This is a paragraph.</p>
+
+<button type="button" onclick="myFunction()">Set font</button>
+ 
+<script>
+function myFunction() {
+  document.getElementById("demo").style.font = "italic bold 20px arial,serif";
+}
+</script>
+
+</body>
+</html>
+----------------------------------------------------------------------------------
+
+	opacity
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#myDIV {
+  position: absolute;
+  width: 300px;
+  height: 150px;
+  background-color: lightblue;
+  border: 1px solid black;
+}
+
+#DIV2 {
+  position: relative;
+  top: 130px;
+  left: 30px;
+  width: 300px;
+  height: 150px;
+  background-color: coral;
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+
+<p>Click the "Try it" button to see through the blue DIV element:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="DIV2">
+  <h1>Voila!</h1>
+</div>
+
+<div id="myDIV">
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("myDIV").style.opacity = "0.5";
+}
+</script>
+
+</body>
+</html>
+-------------------------------------------------------------------------
+
+	positions
+
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#myDIV {
+  border: 1px solid black;
+  background-color: lightblue;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: 20px;
+}
+</style>
+</head>
+<body>
+
+<p>Click the "Try it" button to change the position property of the DIV element:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+  <p>This DIV element is placed 20 pixels from the top of its original position.</p>
+  <p>Click the button to set the position property to "absolute" and see what happens.</p>
+  <p>It will then be placed 20 pixels from the top the page.</p>
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("myDIV").style.position = "absolute";
+}
+</script>
+
+</body>
+</html>
+-------------------------------------------------------------------------------------------
+
+	transition
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#myDIV {
+  border: 1px solid black;
+  background-color: lightblue;
+  width: 270px;
+  height: 200px;
+  overflow: auto;
+}
+
+#myDIV:hover {
+  background-color: coral;
+  width: 570px;
+  height: 500px;
+  padding: 100px;
+  border-radius: 50px;
+}
+</style>
+</head>
+<body>
+
+<p>Mouse over the DIV element and it will change, both in color and size!</p>
+
+<p>Click the "Try it" button and mouse over the DIV element again. The change will now happen gradually, like an animation:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+  <h1>myDIV</h1>
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("myDIV").style.transition = "all 2s";
+}
+</script>
+
+</body>
+</html>
+--------------------------------------------------------------

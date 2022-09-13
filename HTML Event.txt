@@ -1,0 +1,172 @@
+abort 
+
+<video onabort="myFunction()">
+
+--------------------------------------------------------------------
+
+event click
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>HTML DOM Events</h1>
+<h2>The onclick Event</h2>
+
+<p>The onclick event triggers a function when an element is clicked on.</p>
+<p>Click to trigger a function that will output "Hello World":</p>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
+
+</body>
+</html>
+-------------------------------------------------------------------------
+	
+	event drag
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+.droptarget {
+  float: left; 
+  width: 100px; 
+  height: 35px;
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #aaaaaa;
+}
+</style>
+</head>
+<body>
+
+<p>Drag the p element back and forth between the two rectangles:</p>
+
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)">
+  <p ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" id="dragtarget">Drag me!</p>
+</div>
+
+<div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer 8 and earlier versions or Safari 5.1 and earlier versions.</p>
+
+<p id="demo"></p>
+
+<script>
+function dragStart(event) {
+  event.dataTransfer.setData("Text", event.target.id);
+}
+
+function dragging(event) {
+  document.getElementById("demo").innerHTML = "The p element is being dragged";
+}
+
+function allowDrop(event) {
+  event.preventDefault();
+}
+
+function drop(event) {
+  event.preventDefault();
+  var data = event.dataTransfer.getData("Text");
+  event.target.appendChild(document.getElementById(data));
+  document.getElementById("demo").innerHTML = "The p element was dropped";
+}
+</script>
+
+</body>
+</html>
+------------------------------------------------------------------------
+
+event blur
+
+<!DOCTYPE html>
+<html>
+<body>
+
+Enter your name: <input type="text" id="fname" onblur="myFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+---------------------------------------------------------------------------
+
+event focus
+
+<!DOCTYPE html>
+<html>
+<body>
+
+Enter your name: <input type="text" id="fname" onblur="myFunction()">
+
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("fname");
+  x.value = x.value.toUpperCase();
+}
+</script>
+
+</body>
+</html>
+---------------------------------------------------------
+
+	event input sthing
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Write something in the text field to trigger a function.</p>
+
+<input type="text" id="myInput" oninput="myFunction()">
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput").value;
+  document.getElementById("demo").innerHTML = "You wrote: " + x;
+}
+</script>
+
+</body>
+</html>
+-----------------------------------------------------------
+
+	event keypress
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>A function is triggered when the user is pressing a key in the input field.</p>
+
+<input type="text" onkeypress="myFunction()">
+
+<script>
+function myFunction() {
+  alert("You pressed a key inside the input field");
+}
+</script>
+
+</body>
+</html>
+-----------------------------------------------------------------
+
+

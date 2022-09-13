@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Document Object</h1>
+<h2>The activeElement Property</h2>
+
+<p>Cookies associated with this document:</p>
+<p id="demo"></p>
+
+<script>
+let allCookies = document.cookie;
+document.getElementById("demo").innerHTML = allCookies;
+</script>
+
+</body>
+</html>
+----------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Element Object</h1>
+<h2>The addEventListener() Method</h2>
+
+<p>Attach a click event to a button:</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+const element = document.getElementById("myBtn");
+element.addEventListener("click", function() {
+  document.getElementById("demo").innerHTML = "Hello World";
+});
+</script>
+
+</body>
+</html>
+-----------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Element Object</h1>
+<h2>The appendChild() Method</h2>
+
+<ul id="myList1">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+<ul id="myList2">
+  <li>Water</li>
+  <li>Milk</li>
+</ul>
+
+<p>Click "Move" to move an item from one list to another:</p>
+
+<button onclick="myFunction()">Move</button>
+
+<script>
+function myFunction() {
+  const node = document.getElementById("myList2").lastElementChild;
+  document.getElementById("myList1").appendChild(node);
+}
+</script>
+
+</body>
+</html>
+----------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Element Object</h1>
+<h2>The appendChild() Method</h2>
+
+<ul id="myList1">
+  <li>Coffee</li>
+  <li>Tea</li>
+</ul>
+<ul id="myList2">
+  <li>Water</li>
+  <li>Milk</li>
+</ul>
+
+<p>Click "Move" to move an item from one list to another:</p>
+
+<button onclick="myFunction()">Move</button>
+
+<script>
+function myFunction() {
+  const node = document.getElementById("myList2").lastElementChild;
+  document.getElementById("myList1").appendChild(node);
+}
+</script>
+
+</body>
+</html>
+-----------------------------------------------------------------------
+ class name and toggle
+<!DOCTYPE html>
+<html>
+<style>
+.myStyle {
+  background-color: coral;
+  padding: 16px;
+}
+.newStyle {
+  background-color: lightblue;
+  text-align: center;
+  font-size: 25px;
+  padding: 16px;
+}
+</style>
+
+<body>
+<h1>The Element Object</h1>
+<h2>The className Property</h2>
+
+<button onclick="myFunction()">Toggle</button>
+<p>Click "Toggle" (many times) to toggle between two classes.</p>
+
+<div id="myDIV" class="myStyle">
+<p>I am myDIV.</p>
+</div>
+
+<script>
+function myFunction() {
+  const element = document.getElementById("myDIV");
+  if (element.className == "myStyle") {
+    element.className = "newStyle";
+  } else {
+    element.className = "myStyle";
+  }
+}
+</script>
+
+</body>
+</html>
+---------------------------------------------------------------------------
+
+	click
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The click() Method</h2>
+
+<p>Hover over the checkbox to simulate a mouse-click.</p>
+
+<form>
+  <input type="checkbox" id="myCheck" onmouseover="myFunction()">
+</form>
+
+<script>
+function myFunction() {
+  document.getElementById("myCheck").click();
+}
+</script>
+
+
+</body>
+</html>
+--------------------------------------------------------------------------
+
+	innerhtml
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The innerHTML Property</h2>
+
+<p id="demo">Click the button to delete my HTML content (innerHTML).</p>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "";
+}
+</script>
+
+</body>
+</html> 
+---------------------------------------------------------
+
+	setatributes
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The innerHTML Property</h2>
+
+<p id="demo">Click the button to delete my HTML content (innerHTML).</p>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "";
+}
+</script>
+
+</body>
+</html> 
+----------------------------------------------------------
+
+	style
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1 id="myH1">The Element Object</h1>
+<h2>The style Property</h2>
+
+<script>
+document.getElementById("myH1").style.color = "red";
+</script>
+
+</body>
+</html>
+-------------------------------------------------------------
+
+	text content
+	
+	<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The textContent Property</h2>
+
+<p id="demo" onclick="myFunction()">Click me to change my textual content.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").textContent = "I have changed!";
+}
+</script>
+
+</body>
+</html> 
+-----------------------------------------------------------------
